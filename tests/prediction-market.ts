@@ -10,7 +10,7 @@ describe("prediction-market", () => {
 
   it("Is initialized!", async () => {
     // Add your test here.
-    const tx = await program.methods.initialize().rpc();
+    const tx = await program.methods.initializeMarket("Will it rain tomorrow?", new anchor.BN(1714857600)).rpc();
     console.log("Your transaction signature", tx);
   });
 });
